@@ -1,0 +1,619 @@
+{
+  "version": "1.4",
+  "phases": {
+    "universal": [
+      {
+        "id": "tbl_17773921963982omz9",
+        "name": "Factura",
+        "fields": [
+          {
+            "id": "f_17773922020432fcp3",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "id de la Factura",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392207980e8fjr",
+            "name": "Fecha",
+            "pk": false,
+            "fk": false,
+            "description": "Fecha de la Factura",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392212646y0e51",
+            "name": "MontoTotal",
+            "pk": false,
+            "fk": false,
+            "description": "Monto total de la Factura",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17773922168551apbk",
+            "name": "idCliente",
+            "pk": false,
+            "fk": false,
+            "description": "id del Cliente de la Factura.  Es un id único",
+            "uniqueness": "unique",
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777395518683j0bg0",
+            "name": "Telefonos",
+            "pk": false,
+            "fk": false,
+            "description": "Telefonos del cliente",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392229564fyjua",
+            "name": "NombreCliente",
+            "pk": false,
+            "fk": false,
+            "description": "Nombre del cliente",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392241040x0cxk",
+            "name": "idProducto",
+            "pk": false,
+            "fk": false,
+            "description": "id de Productos de la Factura.  Es un id único",
+            "uniqueness": "unique",
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_177739224563403ixa",
+            "name": "NombreProducto",
+            "pk": false,
+            "fk": false,
+            "description": "Nombre del producto",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392250008kpldr",
+            "name": "PrecioProducto",
+            "pk": false,
+            "fk": false,
+            "description": "Precio del Producto",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777392256132foedy",
+            "name": "PrecioVentaProducto",
+            "pk": false,
+            "fk": false,
+            "description": "Precio al que se vendió un Producto",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn1": [
+      {
+        "id": "tbl_177861386528151793",
+        "name": "TelefonoCliente",
+        "fields": [
+          {
+            "id": "f_1778613880392jkrnn",
+            "name": "IdCliente",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778613887961bwgyh",
+            "name": "Telefono",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778614030257xbsqi",
+        "name": "Factura",
+        "fields": [
+          {
+            "id": "f_17786140413858ar0i",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614044369q07or",
+            "name": "Fecha",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614048450zvrwb",
+            "name": "MontoTotal",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614053665e9roy",
+            "name": "idCliente",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614062593d3npa",
+            "name": "NombreCliente",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_17786141326404blnt",
+        "name": "DetalleFactura",
+        "fields": [
+          {
+            "id": "f_1778614188393oowqk",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17786141394893jevx",
+            "name": "idProducto",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614146641g60sm",
+            "name": "NombreProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614165968mgqt1",
+            "name": "PrecioProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614179272dv9h1",
+            "name": "PrecioVentaProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn2": [
+      {
+        "id": "tbl_1778614455762s4gnn",
+        "name": "TelefonoCliente",
+        "fields": [
+          {
+            "id": "f_1778614455762_0vgs",
+            "name": "IdCliente",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614455762_1o4n",
+            "name": "Telefono",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778614474562p3vpr",
+        "name": "Factura",
+        "fields": [
+          {
+            "id": "f_1778614474562_0hjd",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614474562_1y49",
+            "name": "Fecha",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614474562_24mn",
+            "name": "MontoTotal",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614474562_3pf3",
+            "name": "idCliente",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614474562_4iv9",
+            "name": "NombreCliente",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_17786146675629ckjo",
+        "name": "DetalleFactura",
+        "fields": [
+          {
+            "id": "f_1778614667562_0rqs",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614667562_1hvb",
+            "name": "idProducto",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614667562_4tf2",
+            "name": "PrecioVentaProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778614716673m64k2",
+        "name": "Producto",
+        "fields": [
+          {
+            "id": "f_1778614722225klwh7",
+            "name": "idProducto",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614731041w1jjq",
+            "name": "NombreProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614740368ghzos",
+            "name": "PrecioProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn3": [
+      {
+        "id": "tbl_1778614924362nui5v",
+        "name": "TelefonoCliente",
+        "fields": [
+          {
+            "id": "f_1778614924362_0fh5",
+            "name": "IdCliente",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614924362_1h7r",
+            "name": "Telefono",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778614974897ea0l0",
+        "name": "Factura",
+        "fields": [
+          {
+            "id": "f_1778614979953qlj6o",
+            "name": "idFactura",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17786150005771fmrb",
+            "name": "idCliente",
+            "pk": false,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17786149846560omuj",
+            "name": "Fecha",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778614996769q2ang",
+            "name": "MontoTotal",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778615004096s3ljk",
+        "name": "Cliente",
+        "fields": [
+          {
+            "id": "f_1778615009793itzf5",
+            "name": "idCliente",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17786150155217jmtd",
+            "name": "NombreCliente",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778615071257eb7cb",
+        "name": "DetalleFactura",
+        "fields": [
+          {
+            "id": "f_1778615071257_00y3",
+            "name": "idFactura",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778615071257_12pf",
+            "name": "idProducto",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778615071257_2p52",
+            "name": "PrecioVentaProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_17786150873709v25g",
+        "name": "Producto",
+        "fields": [
+          {
+            "id": "f_1778615087370_0dub",
+            "name": "idProducto",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778615087370_1nou",
+            "name": "NombreProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778615087370_2dti",
+            "name": "PrecioProducto",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fnbc": [],
+    "fn4": [],
+    "fn5": []
+  },
+  "activePhase": "fn3",
+  "phase0Extras": {
+    "entities": [
+      {
+        "id": "ent_1778613782098s3kpa",
+        "name": "Factura"
+      },
+      {
+        "id": "ent_1778613793267pz0ze",
+        "name": "Producto"
+      },
+      {
+        "id": "ent_1778613808433lbp9y",
+        "name": "Cliente"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel_1778613835769genwo",
+        "from": "Factura",
+        "to": "Cliente",
+        "cardinality": "1:1"
+      },
+      {
+        "id": "rel_1778613850073zgzl4",
+        "from": "Factura",
+        "to": "Producto",
+        "cardinality": "1:N"
+      }
+    ]
+  },
+  "testData": {
+    "rows": [
+      {
+        "idFactura": "123",
+        "Fecha": "",
+        "MontoTotal": "",
+        "idCliente": "",
+        "Telefonos": "",
+        "NombreCliente": "",
+        "idProducto": "",
+        "NombreProducto": "",
+        "PrecioProducto": "",
+        "PrecioVentaProducto": ""
+      },
+      {
+        "idFactura": "1234",
+        "Fecha": "",
+        "MontoTotal": "",
+        "idCliente": "",
+        "Telefonos": "",
+        "NombreCliente": "",
+        "idProducto": "",
+        "NombreProducto": "",
+        "PrecioProducto": "",
+        "PrecioVentaProducto": ""
+      },
+      {
+        "idFactura": "55555",
+        "Fecha": "",
+        "MontoTotal": "",
+        "idCliente": "",
+        "Telefonos": "",
+        "NombreCliente": "",
+        "idProducto": "",
+        "NombreProducto": "",
+        "PrecioProducto": "",
+        "PrecioVentaProducto": ""
+      },
+      {
+        "idFactura": "",
+        "Fecha": "",
+        "MontoTotal": "",
+        "idCliente": "",
+        "Telefonos": "",
+        "NombreCliente": "",
+        "idProducto": "",
+        "NombreProducto": "",
+        "PrecioProducto": "",
+        "PrecioVentaProducto": ""
+      }
+    ],
+    "excludedTables": []
+  }
+}

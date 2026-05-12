@@ -1,0 +1,629 @@
+{
+  "version": "1.4",
+  "phases": {
+    "universal": [
+      {
+        "id": "tbl_17773165672688eaoe",
+        "name": "Laboratorios",
+        "fields": [
+          {
+            "id": "f_1777316575455xwahr",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "id del laboratorio",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17773166504027datw",
+            "name": "NombreLab",
+            "pk": false,
+            "fk": false,
+            "description": "Nombre del laboratorio",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777316652498y7ahj",
+            "name": "Ubicacion",
+            "pk": false,
+            "fk": false,
+            "description": "Ubicación del laboratorio",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17773196246629uga8",
+            "name": "idResponsable",
+            "pk": false,
+            "fk": false,
+            "description": "id del responsable del lab.  es un id único",
+            "uniqueness": "unique",
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319634575dl2ak",
+            "name": "NombreRes",
+            "pk": false,
+            "fk": false,
+            "description": "nombre del responsable",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319638751bevlq",
+            "name": "idPC",
+            "pk": false,
+            "fk": false,
+            "description": "id de cada PC en el Lab, es un concecutivo por Laboratorio",
+            "uniqueness": "consecutive",
+            "consecutiveOf": "idLaboratorio"
+          },
+          {
+            "id": "f_1777319645191wgoo3",
+            "name": "NombrePC",
+            "pk": false,
+            "fk": false,
+            "description": "Nombre de la PC",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319650177yht2n",
+            "name": "idSoftware",
+            "pk": false,
+            "fk": false,
+            "description": "id de software.  es un id concecutivo por PC",
+            "uniqueness": "consecutive",
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319655569njs1n",
+            "name": "NombreSoft",
+            "pk": false,
+            "fk": false,
+            "description": "Nombre del softrware",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319663027mgymu",
+            "name": "idFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "id del fabricante del software.  es un id único",
+            "uniqueness": "unique",
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1777319667500wseoz",
+            "name": "NombreFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "nombre del fabricante",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn1": [
+      {
+        "id": "tbl_1778617551170dv3m4",
+        "name": "Laboratorio",
+        "fields": [
+          {
+            "id": "f_1778617560305ql2zs",
+            "name": "idLaboratorio",
+            "pk": false,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617565025r31jq",
+            "name": "NombreLab",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617568657i7mtk",
+            "name": "Ubicacion",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617573122j3vu5",
+            "name": "NombreRes",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_177861761083341wz4",
+        "name": "LaboratorioPC",
+        "fields": [
+          {
+            "id": "f_1778617632723tolxa",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_17786176170572kpe9",
+            "name": "idPC",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617623826t9nil",
+            "name": "NombrePC",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778617709042vv88j",
+        "name": "PC-SOFTWARE",
+        "fields": [
+          {
+            "id": "f_1778617709042_0gy4",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617709042_181a",
+            "name": "idPC",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617767888je08n",
+            "name": "idSoftware",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617709042_3pp4",
+            "name": "NombreSoftware",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617709042_4t9g",
+            "name": "idFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617709042_5xnm",
+            "name": "NombreFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn2": [
+      {
+        "id": "tbl_177861777631506ykh",
+        "name": "Laboratorio",
+        "fields": [
+          {
+            "id": "f_1778617776315_0kvq",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617776315_1i85",
+            "name": "NombreLab",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617776315_2pad",
+            "name": "Ubicacion",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617776315_3hjp",
+            "name": "NombreRes",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_177861778454652yk5",
+        "name": "LaboratorioPC",
+        "fields": [
+          {
+            "id": "f_1778617784546_0bqf",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617784546_151r",
+            "name": "idPC",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617784546_2xgl",
+            "name": "NombrePC",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778617807626n2pxc",
+        "name": "PC-SOFTWARE",
+        "fields": [
+          {
+            "id": "f_1778617807626_0fja",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617807626_1be5",
+            "name": "idPC",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617807626_24m3",
+            "name": "idSoftware",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617807626_3zbr",
+            "name": "NombreSoftware",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617807626_479f",
+            "name": "idFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617807626_5soi",
+            "name": "NombreFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fn3": [
+      {
+        "id": "tbl_1778617951115j7ugj",
+        "name": "Laboratorio",
+        "fields": [
+          {
+            "id": "f_1778617951115_0za1",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617951115_130o",
+            "name": "NombreLab",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617951115_20kw",
+            "name": "Ubicacion",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617988065fv4vh",
+            "name": "idResponsable",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_177861796081770vv2",
+        "name": "Responsable",
+        "fields": [
+          {
+            "id": "f_1778617974130vrsfj",
+            "name": "idResponsable",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617979297kzja2",
+            "name": "NombreRes",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778617996802nkri0",
+        "name": "LaboratorioPC",
+        "fields": [
+          {
+            "id": "f_1778617996802_0chj",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617996802_1yoa",
+            "name": "idPC",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778617996802_2jzf",
+            "name": "NombrePC",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778618009625iy3jm",
+        "name": "PC-SOFTWARE",
+        "fields": [
+          {
+            "id": "f_1778618009625_01qh",
+            "name": "idLaboratorio",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618009625_1fvk",
+            "name": "idPC",
+            "pk": true,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618009625_2y21",
+            "name": "idSoftware",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618009625_3vsn",
+            "name": "NombreSoftware",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618009625_4euw",
+            "name": "idFabricante",
+            "pk": false,
+            "fk": true,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618009625_5wat",
+            "name": "NombreFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      },
+      {
+        "id": "tbl_1778618010969kewal",
+        "name": "Fabricante",
+        "fields": [
+          {
+            "id": "f_1778618010969_42a2",
+            "name": "idFabricante",
+            "pk": true,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          },
+          {
+            "id": "f_1778618010969_592s",
+            "name": "NombreFabricante",
+            "pk": false,
+            "fk": false,
+            "description": "",
+            "uniqueness": null,
+            "consecutiveOf": ""
+          }
+        ]
+      }
+    ],
+    "fnbc": [],
+    "fn4": [],
+    "fn5": []
+  },
+  "activePhase": "fn3",
+  "phase0Extras": {
+    "entities": [
+      {
+        "id": "ent_17786173789701uxzp",
+        "name": "Laboratorio"
+      },
+      {
+        "id": "ent_177861738199449vl0",
+        "name": "Responsable"
+      },
+      {
+        "id": "ent_17786173838508whmx",
+        "name": "PC"
+      },
+      {
+        "id": "ent_1778617386554qkws4",
+        "name": "Software"
+      },
+      {
+        "id": "ent_1778617389033qu114",
+        "name": "Fabricante"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel_1778617430490q39f3",
+        "from": "Laboratorio",
+        "to": "Responsable",
+        "cardinality": "1:1"
+      },
+      {
+        "id": "rel_1778617470441yghj1",
+        "from": "Laboratorio",
+        "to": "PC",
+        "cardinality": "1:N"
+      },
+      {
+        "id": "rel_1778617495920fue12",
+        "from": "PC",
+        "to": "Software",
+        "cardinality": "1:N"
+      },
+      {
+        "id": "rel_1778617533488olrao",
+        "from": "Software",
+        "to": "Fabricante",
+        "cardinality": "1:N"
+      }
+    ]
+  },
+  "testData": {
+    "rows": [],
+    "excludedTables": []
+  }
+}
