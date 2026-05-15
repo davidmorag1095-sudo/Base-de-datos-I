@@ -33,6 +33,8 @@ values(3,'Ana',150,'Alajuela',2);
 insert into empleado(idEmpleado,nombre,salario,provincia,idDepartamento)
 values(4, 'José',250,'Puntarenas',2);
 
+insert into empleado(idEmpleado, nombre, salario, provincia, idDepartamento)
+values(5, 'Marcos', 220, 'Alajuela', 2);
 
 -------------------------------------------------------------------------------------------------
 --Seleccionar todos los datos(Muestra la tabla basicamente)
@@ -45,20 +47,19 @@ select * from empleado;
 --where -> condiciones(opciones)
 
 --NOTA: Las condiciones se aplican de manera individual registro por registro
--------------------------------------------------------------------------------------------------
 
 --EJEMPLO: 
 --Mostrar el codigo y el nombre de todos los empleados
 select idEmpleado,nombre
 from empleado;
--------------------------------------------------------------------------------------------------
+
 --Listar el nombre de los empleados
 --Que trabajan en el departamento 1
 
 select nombre
 from empleado
 where idDepartamento = 1;
--------------------------------------------------------------------------------------------------
+
 --Listar los empleados
 --Que vivan en Puntarenas y trabajen 
 --En el departamento 2
@@ -67,7 +68,10 @@ select *
 from empleado
 where provincia = 'Puntarenas'
 	and idDepartamento = 2;
--------------------------------------------------------------------------------------------------
+--------------------------------OPERADORES LOGICOS------------------------------------------------
+								--AND/OR
+								--En los AND se deben cumplir ambos parametros 
+								--En cambio con un OR si muestra a todos los empleados 
 --Que devuelve este select?
 select *
 from empleado
@@ -153,10 +157,12 @@ where nombre like '_u%'; -- El '_' Toma el lugar de la primera letra porque lo t
 -------------------------------------------------------------------------------------------------
 
 
------------------------------------------<>------------------------------------------------------
-								--Los <> significan diferente de
-								-- < Menor 
-								-- > Mayor
+------------------------------------OPERADORES ARITMETICOS---------------------------------------
+									-- > < <> =
+									--Se compara con un unico valor
+									--Los <> significan diferente de
+									-- < Menor 
+									-- > Mayor
 --EJEMPLOS: 
 --Listar los empleados
 --que no vivan en puntarenas
@@ -170,3 +176,80 @@ select *
 from empleado
 where salario > 200;
 -------------------------------------------------------------------------------------------------
+
+--EN SQL
+--where campo = valor, constante, select
+
+--where salario = 200 
+--where salario = campo
+--where salario=(Lo que retorna un select)
+
+--EJEMPLO:
+--Mostrar los empleados
+--Que viven en la misma provincia que vive juan 
+
+--Manera correcta
+select *
+from empleado
+where provincia=(select provincia 
+				from empleado
+				where nombre = 'Juan');
+--NOTA:  --Siempre se compara contra un valor
+		 --El subselect si se esta comparando SIEMPRE un valor con un valor
+--No lo hagan asi:
+select * from empleado where provincia = 'Puntarenas';
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+--EJERCICIOS:
+--1
+
+--Mostrar el nombre
+--del empleado que gana mas 
+
+select nombre
+from empleado
+where salario = (select max(salario) as "Salario Mayor" from empleado);
+
+--ERRORES
+select nombre,max(salario) from empleado; --FATAL
+
+select nombre 
+from empleado where salario = max(salario); --RECONTRA FATAL
+
+select nombre 
+from empleado where salario= 250; --RECONTRA FATAL
+
+-------------------------------------------------------------------------------------------------
+--2 
+
+
+--Listar 
+--Los empleados que trabajen en el mismo
+--departamento de Juan
+
+select *
+from empleado
+where idDepartamento=(select idDepartamento from empleado
+					  where nombre = 'Juan');
+
+-------------------------------------------------------------------------------------------------
+--3
+
+--Listar los empleados
+--que ganen mas de los empleados que
+--viven en Alajuela 
+
+select *
+from empleado
+where salario > (select max(salario) as "Salario Mayor"
+				from empleado
+				where provincia = 'Alajuela');
+
+
+
+
+
+
+
+
