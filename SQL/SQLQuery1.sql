@@ -15,7 +15,7 @@ provincia varchar(20),
 idDepartamento int,
 primary key(idEmpleado));
 --Borrar tablas
---Drop table empleado;
+--drop table empleado;
 -------------------------------------------------------------------------------------------------
 --Tipos de datos comunes
 --int, char, varchar, date
@@ -39,3 +39,9 @@ select * from empleado;
 -- SELECT 
 
 --Select -> campos
+--from -> tablas
+--where -> condiciones(opciones)
+
+--NOTA: Las condiciones se aplican de manera individual registro por registro
+
+--Mostrar el codigo y el nombre de todos los empleados
