@@ -150,4 +150,23 @@ select *
 from empleado
 where nombre like '_u%'; -- El '_' Toma el lugar de la primera letra porque lo tenemos de primero
 						--Si quisiesemos ver los empleados que tengan u en la tercera letra hacemos '__u%'
+-------------------------------------------------------------------------------------------------
 
+
+-----------------------------------------<>------------------------------------------------------
+								--Los <> significan diferente de
+								-- < Menor 
+								-- > Mayor
+--EJEMPLOS: 
+--Listar los empleados
+--que no vivan en puntarenas
+select * 
+from empleado
+where provincia <> 'Puntarenas'; 
+
+--Mostrar los empleados
+--que ganan mas de 200 colones 
+select *
+from empleado
+where salario > 200;
+-------------------------------------------------------------------------------------------------
