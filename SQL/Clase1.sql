@@ -1,4 +1,4 @@
---Crear base de datos
+-- Crear base de datos
 create database curso;
 -------------------------------------------------------------------------------------------------
 --Borrar base de datos
@@ -35,8 +35,6 @@ values(4, 'José',250,'Puntarenas',2);
 
 insert into empleado(idEmpleado, nombre, salario, provincia, idDepartamento)
 values(5, 'Marcos', 220, 'Alajuela', 2);
-
-
 
 -------------------------------------------------------------------------------------------------
 --Seleccionar todos los datos(Muestra la tabla basicamente)
