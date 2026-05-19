@@ -112,8 +112,8 @@ having count(*) > 2;
 --En el where no
 
 ----------------------------------------JOINS---------------------------------------
---es la forma de unir tablas 
---mediante un campo en comun 
+							--Es la forma de unir tablas 
+							--mediante un campo en comun 
 
 --Mostrar el id del empleado, su nombre,
 --id del apartamento y nombre del dep donde trabaja 
@@ -159,3 +159,63 @@ from empleado e, departamento d
 order by e.nombre
 
 --FATAL NO SE DEBE HACER QUE UN SELECT SEA PRODUCTO CARTESIANO
+
+----------------------------------------BETWEEN---------------------------------------
+									--Es un manejo de rangos
+
+--EJEMPLO:
+
+--Mostrar los empleados que ganen
+--entre 200 y 300 colones 
+
+--Utilizando between
+select * 
+from empleado 
+where salario between 200 and 300;
+
+--Esta es una manera "Menos elegante" 
+select *
+from empleado
+where salario >= 200 and salario <= 300;
+
+----------------------------------CAMPOS FECHAS-----------------------------------------------------------
+create table cliente 
+(idCliente int,
+nombre varchar(30),
+fechaNac date,
+primary key(idCliente));
+
+select GETDATE() as "Fechas";
+
+insert into cliente(idCliente,nombre,fechaNac)
+values(1,'Juan','2020-01-20');
+insert into cliente(idCliente,nombre,fechaNac)
+values(2,'Ana','2020-01-20');
+insert into cliente(idCliente,nombre,fechaNac)
+values(3,'Luis','2020-01-20');
+
+select * from cliente;
+
+--Mostrar los clientes nacidos en el 2020
+select * 
+from cliente
+where fechaNac BetWeen '2020-01-01' and '2020-12-01'
+
+--Los sistemas gestores tienen cientos de funciones
+--funciones numeros,funciones fechas, funciones caracteres 
+select * 
+from cliente
+where year(fechaNac) = 2020;
+--Year es una funciona de sqlserver
+
+
+----------------------------------CAMPOS NULOS----------------------------------------------------
+							--Un campo vacio no es lo mismo que null
+select *
+from emp where comm = null; --No se puede
+
+select * 
+from emp where comm is null; --Correcto
+
+select * 
+from emp where comm is not null; --Correcto
