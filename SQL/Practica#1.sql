@@ -31,14 +31,32 @@ from DEPT;
 ALTER TABLE EMP ADD FOREIGN KEY (DEPTNO) REFERENCES DEPT(DEPTNO);
 ALTER TABLE EMP ADD FOREIGN KEY (MGR) REFERENCES EMP(ENO); 
 -------------------------------------------------------------------------------
+--INSERT DEPT
+insert into DEPT(DEPTNO,DNAME,LOC)
+values(20,'Research','Dallas');
+------------------------------------
+insert into DEPT(DEPTNO,DNAME,LOC)
+values(10,'Accounting','New York');
+------------------------------------
+insert into DEPT(DEPTNO,DNAME,LOC)
+values(30,'Sales','Chicago');
+------------------------------------
+insert into DEPT(DEPTNO,DNAME,LOC)
+values(40,'Operations','Boston');
+-------------------------------------------------------------------------------
 --INSERTS EMP
 insert into EMP(ENO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
 values(7369,'Smith','Clerk',7902,'1980-12-17',800,NULL,20);
-
+-----------------------------------------------------------------
 insert into EMP(ENO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
-values(7369,'KING','PRESIDENT',NULL,'1981-11-17',5000,NULL,10);
-
+values(7839,'KING','PRESIDENT',NULL,'1981-11-17',5000,NULL,10);
+-----------------------------------------------------------------
 insert into EMP(ENO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
 values(7369,'Smith','Clerk',7902,'1980-12-17',800,NULL,20);
+-----------------------------------------------------------------
+insert into EMP(ENO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO)
+values(7698,'´BLAKE','MANAGER',7839,'1981-5-1',2850,NULL,10);
+-----------------------------------------------------------------
 select * 
 from EMP
+delete from EMP;
